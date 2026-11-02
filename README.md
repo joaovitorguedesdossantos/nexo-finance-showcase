@@ -47,13 +47,9 @@ O projeto contém componentes de interface e lógica para as seguintes áreas. A
 
 ## Interface do aplicativo
 
-### Visão geral — captura real
+### Visão geral — captura real (inclusão pendente)
 
-A imagem abaixo foi obtida diretamente do aplicativo em execução, em ambiente de teste. O cabeçalho da captura identifica o protocolo de desenvolvimento **0.7.7**; o pacote de código analisado separadamente é a exportação **0.7.10**.
-
-![Visão geral real do Nexo Finance em ambiente de teste](images/visao-geral-real.png)
-
-A interface apresenta os principais indicadores da operação e o status da conciliação. Os valores exibidos são zerados e a tela identifica recursos ainda em implantação; não representam resultados de produção.
+Foi obtida uma captura real do aplicativo em ambiente de teste, identificada como protocolo de desenvolvimento **0.7.7**. A exportação de código analisada separadamente é a **0.7.10**. A imagem será adicionada após o envio do arquivo `images/visao-geral-real.png` ao repositório público, sem exposição de dados sensíveis.
 
 ### Próximas capturas
 
