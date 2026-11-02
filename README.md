@@ -47,19 +47,19 @@ O projeto contém componentes de interface e lógica para as seguintes áreas. A
 
 ## Interface do aplicativo
 
-As capturas de tela serão adicionadas após validação em um ambiente de demonstração, utilizando **somente dados fictícios**.
+### Visão geral — captura real
 
-**Telas selecionadas para documentação:**
+A imagem abaixo foi obtida diretamente do aplicativo em execução, em ambiente de teste. O cabeçalho da captura identifica o protocolo de desenvolvimento **0.7.7**; o pacote de código analisado separadamente é a exportação **0.7.10**.
 
-1. Visão geral (dashboard).
-2. Central de conciliação.
-3. Relatórios e fechamento mensal.
+![Visão geral real do Nexo Finance em ambiente de teste](images/visao-geral-real.png)
 
-<!-- Quando as capturas reais forem adicionadas à pasta images, descomente as linhas abaixo:
-![Dashboard do Nexo Finance](images/dashboard.png)
-![Central de conciliação](images/conciliacao.png)
-![Relatório mensal](images/relatorio-mensal.png)
--->
+A interface apresenta os principais indicadores da operação e o status da conciliação. Os valores exibidos são zerados e a tela identifica recursos ainda em implantação; não representam resultados de produção.
+
+### Próximas capturas
+
+- Conciliação bancária (aguardando captura da interface real).
+- Lançamento e consulta de vendas (aguardando captura da interface real).
+- Relatórios e fechamento mensal (aguardando captura da interface real).
 
 ## Evolução do desenvolvimento
 
@@ -75,5 +75,3 @@ Bacharel em Administração · Estudante de Engenharia de Software
 ## Privacidade e acesso
 
 O Nexo Finance permanece privado. Este repositório contém somente material de apresentação, sem código-fonte operacional, senhas, tokens, chaves de serviço, registros bancários reais ou dados pessoais de terceiros.
-
-  
