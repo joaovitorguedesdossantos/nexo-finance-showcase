@@ -1,73 +1,83 @@
-# Nexo Finance
+<div align="center">
 
-### Desenvolvimento de um sistema de gestão e conciliação financeira empresarial
+![Nexo Finance — Cyber Tech](assets/nexo-cyber-banner.svg)
 
-**Status:** em desenvolvimento · **Material:** documentação pública do projeto · **Acesso à aplicação:** privado
+### Gestão financeira empresarial, do dado à decisão
 
-> Este repositório apresenta o processo de criação do Nexo Finance. O código-fonte da aplicação e os dados operacionais não são disponibilizados aqui.
+![Status](https://img.shields.io/badge/STATUS-EM_DESENVOLVIMENTO-0b1227?style=for-the-badge&labelColor=111827&color=23c7b7)
+![Stack](https://img.shields.io/badge/STACK-REACT_·_TYPESCRIPT_·_SUPABASE-5f63d9?style=for-the-badge&labelColor=111827)
+![Acesso](https://img.shields.io/badge/C%C3%93DIGO-PRIVADO-334155?style=for-the-badge&labelColor=111827)
 
-## Sobre o projeto
+**Visibilidade pública do projeto · Código operacional privado · Sem dados financeiros reais**
 
-O **Nexo Finance** é um projeto de software voltado à organização de rotinas financeiras empresariais. Surgiu da necessidade de reunir informações de vendas, movimentações bancárias, recebimentos e despesas em uma interface própria, com apoio à conferência e à análise de resultados.
+</div>
 
-O desenvolvimento combina necessidades reais de gestão com estudo e aplicação de conceitos de **Engenharia de Software**, incluindo estruturação de requisitos, interfaces, persistência de dados, autorização de acesso e melhoria contínua.
+---
 
-## Objetivos
+## ◈ Visão do projeto
 
-- Centralizar informações utilizadas nas rotinas financeiras.
-- Organizar lançamentos e consultas de vendas.
-- Apoiar a conferência de movimentações bancárias e recebíveis.
-- Estruturar relatórios e fechamentos semanais e mensais.
-- Melhorar a visualização das informações gerenciais.
-- Reduzir retrabalho em processos manuais de conferência.
+O **Nexo Finance** é um sistema de gestão e conciliação financeira empresarial em desenvolvimento. Seu objetivo é centralizar vendas, movimentações bancárias, recebíveis, despesas e fechamentos, reduzindo retrabalho e melhorando a rastreabilidade das análises.
 
-## Áreas do sistema
+O projeto integra necessidades reais de gestão a práticas de **Engenharia de Software**. Este repositório é uma **vitrine técnica e documental**, não o código-fonte de produção.
 
-O projeto contém componentes de interface e lógica para as seguintes áreas. A presença de um módulo no código **não significa que todas as funcionalidades estejam concluídas ou validadas em produção**.
+## ◈ Arquitetura funcional
 
-| Área | Finalidade |
-| --- | --- |
-| Visão geral | Reunir indicadores e informações de acompanhamento. |
-| Vendas | Registrar e consultar informações de vendas. |
-| Cofre | Organizar movimentações de dinheiro em espécie. |
-| Saldos e movimentações bancárias | Consultar informações relacionadas às contas e suas movimentações. |
-| Recebíveis de cartões | Apoiar o acompanhamento de recebimentos por cartão. |
-| Central de conciliação | Apoiar a conferência e a análise de divergências. |
-| Relatório semanal | Consolidar dados financeiros de um período semanal. |
-| Relatório mensal | Reunir receitas, despesas e informações de resultado mensal. |
-| Administração e preferências | Organizar configurações e controles de acesso. |
+| Módulo | Propósito |
+|:--|:--|
+| **Overview** | Indicadores e acompanhamento financeiro |
+| **Sales** | Totais de vendas e consultas por período |
+| **Banking** | Saldos por conta e movimentações importadas |
+| **Reconciliation** | Conferência de saldos e análise de divergências |
+| **Receivables** | Acompanhamento de recebíveis de cartões |
+| **Cash Vault** | Movimentações de dinheiro em espécie |
+| **Reports** | Fechamentos semanais e mensais |
+| **Settings** | Administração, preferências e controles de acesso |
 
-## Tecnologias identificadas na prévia de desenvolvimento
+> A presença de um módulo na documentação não certifica que todas as suas funcionalidades estejam concluídas ou validadas em produção.
 
-- **React** — componentes de interface.
-- **TypeScript** — desenvolvimento com tipagem estática.
-- **Vite** — ambiente de desenvolvimento e build.
-- **Supabase** — integração de autenticação e dados.
-- **CSS** — estilos e temas visuais da aplicação.
+## ◈ Stack identificada nas prévias
 
-## Interface do aplicativo
+<p>
+  <img src="https://img.shields.io/badge/React-111827?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-111827?style=flat-square&logo=typescript&logoColor=3178C6" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-111827?style=flat-square&logo=vite&logoColor=646CFF" alt="Vite" />
+  <img src="https://img.shields.io/badge/Supabase-111827?style=flat-square&logo=supabase&logoColor=3ECF8E" alt="Supabase" />
+</p>
 
-### Visão geral — captura real (inclusão pendente)
+## ◈ Próxima etapa: conciliação progressiva
 
-Foi obtida uma captura real do aplicativo em ambiente de teste, identificada como protocolo de desenvolvimento **0.7.7**. A exportação de código analisada separadamente é a **0.7.10**. A imagem será adicionada após o envio do arquivo `images/visao-geral-real.png` ao repositório público, sem exposição de dados sensíveis.
+A conciliação foi especificada para trabalhar a partir de um **Dia Zero definido pelo usuário** — um saldo de abertura com data e horário por conta, sem necessidade de recuperar lançamentos antigos.
 
-### Próximas capturas
+- **Progressiva e não bloqueante:** cada verificação acontece quando os dados relevantes daquela verificação estiverem disponíveis.
+- **OFX:** entradas e saídas registradas no saldo bancário, com proteção planejada contra duplicidades.
+- **PIX:** créditos entram na movimentação, sem classificação automática como vendas e sem exigir venda individual correspondente.
+- **Outras receitas:** aluguéis e outros créditos não serão confundidos com faturamento da loja.
+- **Conferência ≠ categorização:** saldo conferido não significa origem de cada recebimento identificada.
 
-- Conciliação bancária (aguardando captura da interface real).
-- Lançamento e consulta de vendas (aguardando captura da interface real).
-- Relatórios e fechamento mensal (aguardando captura da interface real).
+**[Consultar os requisitos e critérios de aceite →](https://github.com/joaovitorguedesdossantos/nexo-finance-showcase/issues/1)**
 
-## Evolução do desenvolvimento
+> Esses itens são **requisitos para implementação e testes da próxima versão**, não funcionalidades declaradas como concluídas.
 
-O projeto evolui por etapas de levantamento de necessidades, desenho de interface, implementação, testes e revisão dos fluxos. Esta vitrine será atualizada com marcos de desenvolvimento e decisões técnicas que possam ser divulgados sem expor informações sensíveis.
+## ◈ Interface real
 
-**Referência analisada:** pacote de documentação da prévia `v0.7.10` (novembro de 2026). Essa identificação se refere ao pacote analisado, não a uma certificação de estabilidade ou conclusão funcional.
+Capturas de tela reais somente serão incorporadas quando revisadas para remover dados sensíveis. Existe referência documental a uma captura de teste identificada como protocolo **0.7.7**; a prévia de código analisada separadamente foi a **0.7.10**. A numeração não significa validação funcional ou lançamento em produção.
 
-## Sobre o autor
+**Capturas planejadas:** visão geral, conciliação bancária, vendas e relatórios. O banner desta página é uma **arte conceitual**, não uma captura do aplicativo.
+
+## ◈ Roadmap técnico
+
+- [x] Estruturar a documentação pública do projeto
+- [x] Especificar Dia Zero, conciliação progressiva e tratamento inicial de PIX
+- [ ] Implementar e validar regras na aplicação privada
+- [ ] Testar OFX, conciliação parcial, saldos e deduplicação com dados de exemplo
+- [ ] Publicar capturas reais revisadas, sem informações sensíveis
+
+## ◈ Sobre o desenvolvedor
 
 **João Vitor Guedes dos Santos**  
-Bacharel em Administração · Estudante de Engenharia de Software
+Bacharel em Administração · Estudante de Engenharia de Software  
+Atuação em gestão empresarial, com interesse em desenvolvimento de software, automação e cibersegurança.
 
-## Privacidade e acesso
+---
 
-O Nexo Finance permanece privado. Este repositório contém somente material de apresentação, sem código-fonte operacional, senhas, tokens, chaves de serviço, registros bancários reais ou dados pessoais de terceiros.
+<div align="center"><sub>NEXO FINANCE · BUILDING WITH PURPOSE · DOCUMENTATION SHOWCASE</sub></div>
